@@ -48,7 +48,7 @@ class BarangmasukController extends Controller
         $barangmasuk->tgl_msk = $request->tgl_msk;
         $barangmasuk->jumlah_msk = $request->jumlah_msk;
         $barangmasuk->save();
-        Alert::success('Good Job', 'Data berhasil ditambah');
+        Alert::success('Mantap', 'Data berhasil ditambah');
 
         $barang = Barang::findOrFail($request->id_barang);
         $barang->jumlah_stok += $request->jumlah_msk;
@@ -120,7 +120,7 @@ class BarangmasukController extends Controller
     {
     $barangmasuk = Barangmasuk::findOrFail($id);
     $barangmasuk->delete();
-    Alert::success('Good Job', 'Data berhasil dihapus');
+    Alert::success('Mantap', 'Data berhasil dihapus');
        return redirect()->route('bmasuk.index');
     }
 }

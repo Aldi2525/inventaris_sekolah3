@@ -60,7 +60,7 @@ class SupplierController extends Controller
         $supplier->alamat = $request->alamat;
         $supplier->no_wa = $request->no_wa;
         $supplier->save();
-        Alert::success('Good Job', 'Data berhasil ditambah');
+        Alert::success('Mantap', 'Data berhasil ditambah');
         return redirect()->route('supplier.index');
     }
 
@@ -112,7 +112,7 @@ class SupplierController extends Controller
         $supplier->alamat = $request->alamat;
         $supplier->no_wa = $request->no_wa;
         $supplier->save();
-        Alert::success('Good Job', 'Data berhasil update');
+        Alert::success('Mantap', 'Data berhasil update');
         return redirect()->route('supplier.index');
     }
 
@@ -128,7 +128,7 @@ class SupplierController extends Controller
         if (!Supplier::destroy($id)) {
             return redirect()->back();
         }
-        Alert::success('Good Job', 'Data berhasil dihapus');
+        Alert::success('Mantap', 'Data berhasil dihapus');
         return redirect()->route('supplier.index');
     }
 }

@@ -44,8 +44,13 @@ class PeminjamController extends Controller
         //
         $barang = Barang::findOrFail($request->id_barang);
         $request->validate([
-            'jumlah_pinjam' => 'numeric|max:'.$barang->jumlah_stok,
+            'jumlah_pinjam' => 'numeric|min:1|max:'.$barang->jumlah_stok,
         ]);
+
+        if($validator->fails()){
+            return back()->with('errors', $validator->messages()->all()[0])->withInput();
+        }
+        
         $peminjam = new Peminjam;
         $peminjam->id_barang = $request->id_barang;
         $peminjam->nama_peminjam = $request->nama_peminjam;
@@ -54,7 +59,7 @@ class PeminjamController extends Controller
         $peminjam->status = $request->status;  
         $peminjam->save();
 
-        Alert::success('Good Job', 'Data berhasil ditambah');
+        Alert::success('Mantap', 'Data berhasil ditambah');
         
         $barang->jumlah_stok -= $request->jumlah_pinjam;
         $barang->save();
@@ -107,7 +112,7 @@ class PeminjamController extends Controller
         //
         $peminjam = Peminjam::findOrFail($id);
         $peminjam->delete();
-        Alert::success('Good Job', 'Data berhasil dihapus');
+        Alert::success('Mantap', 'Data berhasil dihapus');
         return redirect()->route('pinjam.index');
 
     }

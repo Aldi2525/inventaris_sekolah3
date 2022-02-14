@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pengembalian;
 use App\Models\Peminjam;
 use App\Models\Barang;
-use Session;
+use Alert;
 use Illuminate\Http\Request;
 
 class PengembalianController extends Controller
@@ -52,7 +52,7 @@ class PengembalianController extends Controller
         $kembali->tgl_kembali = $request->tgl_kembali;
         $kembali->status = $request->status;
         $kembali->save();
-        Alert::success('Good Job', 'Data berhasil ditambah');
+        Alert::success('Mantap', 'Data berhasil ditambah');
 
         $barang = Barang::findOrFail($request->id_barang);
         $barang->jumlah_stok += $request->jumlah_kembali;
@@ -109,7 +109,7 @@ class PengembalianController extends Controller
         //
         $kembali = Pengembalian::findOrFail($id);
         $kembali->delete();
-        Alert::success('Good Job', 'Data berhasil dihapus');
+        Alert::success('Mantap', 'Data berhasil dihapus');
         return redirect()->route('kembali.index');
 
     

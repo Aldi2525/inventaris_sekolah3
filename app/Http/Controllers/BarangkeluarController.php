@@ -48,7 +48,7 @@ class BarangkeluarController extends Controller
         $barangkeluar->jumlah_klr = $request->jumlah_klr;
         $barangkeluar->catatan = $request->catatan;
         $barangkeluar->save();
-        Alert::success('Good Job', 'Data berhasil ditambah');
+        Alert::success('Mantap', 'Data berhasil ditambah');
 
         $barang = Barang::findOrFail($request->id_barang);
         $barang->jumlah_stok -= $request->jumlah_klr;
@@ -103,7 +103,7 @@ class BarangkeluarController extends Controller
        //
        $barangkeluar = Barangkeluar::findOrFail($id);
        $barangkeluar->delete();
-       Alert::success('Good Job', 'Data berhasil dihapus');
+       Alert::success('Mantap', 'Data berhasil dihapus');
        return redirect()->route('bkeluar.index');
     }
 }

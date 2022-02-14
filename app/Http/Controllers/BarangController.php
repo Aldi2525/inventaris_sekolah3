@@ -52,7 +52,7 @@ class BarangController extends Controller
         // $barang->jumlah_stok = $request->jumlah_stok;
         $barang->id_supplier = $request->id_supplier;
         $barang->save();
-        Alert::success('Good Job', 'Data berhasil ditambah');
+        Alert::success('Mantap', 'Data berhasil ditambah');
         return redirect()->route('barang.index');
     }
 
@@ -120,7 +120,7 @@ class BarangController extends Controller
         if (!Barang::destroy($id)) {
             return redirect()->back();
         }
-        Alert::success('Good Job', 'Data berhasil dihapus');
+        Alert::success('Mantap', 'Data berhasil dihapus');
         return redirect()->route('barang.index');
     }
 }

@@ -48,7 +48,7 @@
                                         @method('delete')
                                         @csrf
                                         <!-- <a href="{{route('bmasuk.edit',$data->id)}}" class="btn btn-outline-info">Edit</a> -->
-                                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapusnya')">HAPUS</button>
+                                        <button type="submit" class="btn btn-outline-danger delete-confirm" >HAPUS</button>
                                         </form>
                                  </td>
                              </tr>

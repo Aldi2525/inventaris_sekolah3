@@ -64,11 +64,11 @@
                             @enderror
                    
 
-                        <div class="form-group">
+                            <div class="form-group">
                             <label for="">Status</label>
                                 <select name="status" class="form-control">
-                                <option value="-">-</option>
-                                    <option value="Dikembalikan">Pengembalian</option>
+                                <option  disabled>Pilih</option>
+                                <option value="Pengembalian">Pengembalian</option>
                                 </select>
     
                            </div>

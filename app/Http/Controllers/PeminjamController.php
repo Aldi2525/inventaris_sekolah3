@@ -43,13 +43,14 @@ class PeminjamController extends Controller
     {
         //
         $barang = Barang::findOrFail($request->id_barang);
+        alert()->error('Mohon maaf','Stok hanya '.$barang->jumlah_stok.' tidak cukup');
+     
+
+
         $request->validate([
             'jumlah_pinjam' => 'numeric|min:1|max:'.$barang->jumlah_stok,
+            
         ]);
-
-        if($validator->fails()){
-            return back()->with('errors', $validator->messages()->all()[0])->withInput();
-        }
         
         $peminjam = new Peminjam;
         $peminjam->id_barang = $request->id_barang;

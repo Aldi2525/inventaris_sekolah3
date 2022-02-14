@@ -48,15 +48,10 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="">Keterangan</label>
-                            <input type="text" name="catatan" class="form-control @error('jumlah_klr') is-invalid @enderror">
-                             @error('catatan')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+                        <label for="">Deskripsi:</label>
+
+                            <textarea id="catatan" name="catatan" rows="1" cols="140">
+                            </textarea>
                       
 
                             <button type="reset" class="btn btn-outline-warning">Reset</button>

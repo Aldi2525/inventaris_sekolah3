@@ -7,29 +7,6 @@
 <br>
 @endsection
 
-@section('js')
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-    $(".delete-confirm").click(function (event) {
-        var form = $(this).closest("form");
-        var name = $(this).data("name");
-        event.preventDefault();
-        Swal.fire({
-            title: "Apakah Kamu Yakin?",
-            text: "Data ini akan dihapus dan tidak bisa balik lagi",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Ya, Saya Yakin!",
-        }).then((result) => {
-            if (result.isConfirmed) {
-                form.submit();
-            }
-        });
-    });
-</script>
-@endsection
 
 
 @section('content')
@@ -69,7 +46,7 @@
                                         @method('delete')
                                         @csrf
                                         <!-- <a href="{{route('barang.edit',$data->id)}}" class="btn btn-outline-info">Edit</a> -->
-                                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapusnya')">HAPUS</button>
+                                        <button type="submit" class="btn btn-outline-danger delete-confirm" >HAPUS</button>
                                         </form>
                                  </td>
                              </tr>

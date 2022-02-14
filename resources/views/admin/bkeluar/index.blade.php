@@ -16,7 +16,7 @@
                 <div class="card-header">
                 @include('layouts._flash')
                    <b>Data Barang Keluar</b>
-                    <a href="{{route('bkeluar.create')}}" class="btn btn-sm btn-outline-primary float-right"><i>Barang Keluar</i></a>
+                    <a href="{{route('bkeluar.create')}}" class="btn btn-sm btn-outline-primary float-right"><i>Tambah Barang Keluar</i></a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -47,7 +47,7 @@
                                         @method('delete')
                                         @csrf
                                         <!-- <a href="{{route('bmasuk.edit',$data->id)}}" class="btn btn-outline-info">Edit</a> -->
-                                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapusnya')">HAPUS</button>
+                                        <button type="submit" class="btn btn-outline-danger delete-confirm" >HAPUS</button>
                                         </form>
                                  </td>
                              </tr>

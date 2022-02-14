@@ -49,9 +49,7 @@
                                                     method="post">
                                                     @method('delete')
                                                     @csrf
-                                                    
-                                                    <button type="submit" class="btn btn-outline-danger"
-                                                        onclick="return confirm('Apakah anda yakin menghapusnya')">HAPUS</button>
+                                                    <button type="submit" class="btn btn-outline-danger delete-confirm" >HAPUS</button>
                                                 </form>
                                             </td>
                                         </tr>

@@ -44,6 +44,17 @@ class PengembalianController extends Controller
     public function store(Request $request)
     {
         //
+        $barang = Barang::findOrFail($request->id_barang);
+        $pinjam = Peminjam::findOrFail ($request->id_peminjam);
+
+        alert()->error('Mohon maaf','Pinjaman kamu hanya '.$pinjam->jumlah_pinjam.'');
+     
+
+
+        $request->validate([
+            'jumlah_kembali' => 'numeric|min:1|max:'.$pinjam->jumlah_pinjam,
+            
+        ]);
 
         $kembali = new Pengembalian;
         $kembali->id_peminjam = $request->id_peminjam;
@@ -54,9 +65,8 @@ class PengembalianController extends Controller
         $kembali->save();
         Alert::success('Mantap', 'Data berhasil ditambah');
 
-        $barang = Barang::findOrFail($request->id_barang);
         $barang->jumlah_stok += $request->jumlah_kembali;
-        $pinjam = Peminjam::findOrFail ($request->id_peminjam);
+       
         $pinjam->jumlah_pinjam -= $request->jumlah_kembali;
         $barang->save();
         $pinjam->save();

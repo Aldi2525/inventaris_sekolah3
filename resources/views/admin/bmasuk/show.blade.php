@@ -16,7 +16,7 @@
                 <div class="card-header">
                 @include('layouts._flash')
                    <b>Data Barang Masuk</b>
-                    <a href="{{route('bmasuk.create')}}" class="btn btn-sm btn-outline-primary float-right"><i>Tambah Barang Masuk</i></a>
+                    <!-- <a href="{{route('bmasuk.create')}}" class="btn btn-sm btn-outline-primary float-right"><i>Tambah Barang Masuk</i></a> -->
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -27,7 +27,7 @@
                             <th>Nama Barang</th>                          
                             <th>Tanggal Masuk</th>
                             <th>Jumlah Masuk</th>
-                            <th>Aksi</th>
+                            
                             </tr>
                             </thead>
                             @php $no=1; @endphp
@@ -41,14 +41,14 @@
 
 
 
-                                 <td>
+                                 <!-- <td>
                                     <form action="{{route('bmasuk.destroy',$data->id)}}" method="post">
                                         @method('delete')
                                         @csrf
-                                        <a href="{{route('bmasuk.show',$data->id)}}" class="btn btn-outline-info">Laporan</a>
+                                        <a href="{{route('bmasuk.edit',$data->id)}}" class="btn btn-outline-info">Laporan</a>
                                         <button type="submit" class="btn btn-outline-danger delete-confirm" >HAPUS</button>
                                         </form>
-                                 </td>
+                                 </td> -->
                              </tr>
                             @endforeach
                             </tbody>

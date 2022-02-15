@@ -32,8 +32,8 @@
                         </div>
                         <div class="form-group">
                              <label for="">Nama Peminjam</label>
-                            <input type="text" name="nama_peminjam" class="form-control @error('tgl_msk') is-invalid @enderror">
-                             @error('tgl_msk')
+                            <input type="text" name="nama_peminjam" class="form-control @error('nama_peminjam') is-invalid @enderror">
+                             @error('nama_peminjam')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -41,8 +41,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Jumlah Pinjam</label>
-                            <input type="number" name="jumlah_pinjam" class="form-control @error('jumlah_msk') is-invalid @enderror">
-                             @error('jumlah_msk')
+                            <input type="number" name="jumlah_pinjam" class="form-control @error('jumlah_pinjam') is-invalid @enderror">
+                             @error('jumlah_pinjam')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

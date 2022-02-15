@@ -46,8 +46,8 @@
 
                         <div class="form-group">
                             <label for="">Jumlah Kembali</label>
-                            <input type="number" name="jumlah_kembali" class="form-control @error('jumlah_msk') is-invalid @enderror">
-                             @error('jumlah_msk')
+                            <input type="number" name="jumlah_kembali" class="form-control @error('jumlah_kembali') is-invalid @enderror">
+                             @error('jumlah_kembali')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

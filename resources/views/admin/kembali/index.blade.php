@@ -17,7 +17,7 @@
                         @include('layouts._flash')
                         <b>Data pengembalian</b>
                         <a href="{{ route('kembali.create') }}"
-                            class="btn btn-sm btn-outline-primary float-right"><i>Data Pengembalian</i></a>
+                            class="btn btn-sm btn-outline-primary float-right"><i>Tambah Data Pengembalian</i></a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

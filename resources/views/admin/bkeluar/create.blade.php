@@ -48,12 +48,10 @@
                                 </span>
                             @enderror
                         </div>
-                        <label for="">Deskripsi:</label>
+                        <label for="">Alamat</label>
+                            <textarea id="catatan" name="alamat" rows="1.5" cols="149"></textarea>
 
-                            <textarea id="catatan" name="catatan" rows="1" cols="140">
-                            </textarea>
-                      
-
+                            
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>
                         </div>

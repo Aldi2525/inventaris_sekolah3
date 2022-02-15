@@ -41,8 +41,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Jumlah Masuk</label>
-                            <input type="number" name="jumlah_msk" class="form-control @error('jumlah_msk') is-invalid @enderror">
-                             @error('jumlah_msk')
+                            <input type="number" name="jumlah_msk" class="form-control @error('jumlah_masuk') is-invalid @enderror">
+                             @error('jumlah_masuk')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

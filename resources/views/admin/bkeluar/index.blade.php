@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table" id="bmasuk">
+                        <table class="table" id="bkeluar">
                             <thead>
                             <tr>
                             <th>Id</th>
@@ -71,7 +71,7 @@
  <script src="{{asset('DataTables/datatables.min.js')}}"></script>
  <script>
      $(document).ready(function() {
-    $('#bmasuk').DataTable();
+    $('#bkeluar').DataTable();
 } );
  </script>
 @endsection

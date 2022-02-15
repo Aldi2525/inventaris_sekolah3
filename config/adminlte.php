@@ -226,11 +226,7 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
+        
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
@@ -285,6 +281,29 @@ return [
             'url'         => 'admin/kembali',
             'icon'        => 'fas fa-address-book',
         ],
+
+        // [
+        //     'text'    => 'Laporan',
+        //     'icon'    => 'fas fa-bookmark',
+        //     // 'submenu' => [
+        //     //     [
+        //     //         'text'        => 'Barang',
+        //     //         'url'         => 'admin/barang',
+                   
+        //     //     ],
+        //     //     [
+        //     //         'text'        => 'Peminjaman',
+        //     //         'url'         => 'admin/pinjam',
+                   
+        //     //     ],
+        //     //     [
+        //     //         'text'        => 'Pengembalian',
+        //     //         'url'         => 'admin/kembali',
+                    
+        //     //     ],
+        //     // ],
+        // ],
+
         
 
     ],

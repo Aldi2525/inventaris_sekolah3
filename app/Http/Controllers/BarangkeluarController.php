@@ -42,6 +42,16 @@ class BarangkeluarController extends Controller
     public function store(Request $request)
     {
         //
+        $barang = Barang::findOrFail($request->id_barang);
+        alert()->error('Mohon maaf','Stok hanya '.$barang->jumlah_stok.' tidak cukup');
+     
+
+
+        $request->validate([
+            'jumlah_klr' => 'numeric|min:1|max:'.$barang->jumlah_stok,
+            
+        ]);
+
         $barangkeluar = new Barangkeluar;
         $barangkeluar->id_barang = $request->id_barang;
         $barangkeluar->tgl_klr = $request->tgl_klr;
@@ -50,7 +60,7 @@ class BarangkeluarController extends Controller
         $barangkeluar->save();
         Alert::success('Mantap', 'Data berhasil ditambah');
 
-        $barang = Barang::findOrFail($request->id_barang);
+       
         $barang->jumlah_stok -= $request->jumlah_klr;
         $barang->save();
 

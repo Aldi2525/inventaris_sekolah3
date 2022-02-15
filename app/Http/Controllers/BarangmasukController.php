@@ -65,7 +65,8 @@ class BarangmasukController extends Controller
      */
     public function show(Barangmasuk $barangmasuk)
     {
-        //
+        $bmasuk = Barangmasuk::all();
+        return view('admin.bmasuk.show', compact('bmasuk'));
     }
 
     /**

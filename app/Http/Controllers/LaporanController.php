@@ -30,6 +30,10 @@ class LaporanController extends Controller
             $bkeluar = Barangkeluar::whereBetween('created_at', [$start, $end])->get();
             $peminjam = Peminjam::whereBetween('created_at', [$start, $end])->get();
             $pengembalian = Pengembalian::whereBetween('created_at', [$start, $end])->get();
+
+            foreach ($bmasuk as $value) {
+                $jumlah += $value->jumlah;
+            }
             
          
             return view('admin.laporan.cetak_laporan', ['bmasuk' => $bmasuk, 'bkeluar' => $bkeluar,'peminjam' => $peminjam,

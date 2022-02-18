@@ -17,7 +17,7 @@
                 <div class="card-header">
                     @include('layouts._flash')
                    <b>Data Barang</b>
-                   <a href="{{route('barang.create')}}" class="btn btn-sm btn-outline-primary float-right"><i>Tambah Barang</i></a>
+                   <a href="{{route('barang.create')}}" class="btn btn-sm btn-outline-primary float-right"><i>Tambah List Barang</i></a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

@@ -43,11 +43,11 @@ class BarangmasukController extends Controller
     {
         //
      
-        $barangmasuk = new Barangmasuk;
-        $barangmasuk->id_barang = $request->id_barang;
-        $barangmasuk->tgl_msk = $request->tgl_msk;
-        $barangmasuk->jumlah_msk = $request->jumlah_msk;
-        $barangmasuk->save();
+        $bmasuk = new Barangmasuk;
+        $bmasuk->id_barang = $request->id_barang;
+        $bmasuk->tgl_msk = $request->tgl_msk;
+        $bmasuk->jumlah_msk = $request->jumlah_msk;
+        $bmasuk->save();
         Alert::success('Mantap', 'Data berhasil ditambah');
 
         $barang = Barang::findOrFail($request->id_barang);

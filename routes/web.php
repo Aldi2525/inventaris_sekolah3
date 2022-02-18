@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BarangmasukController;
 use App\Http\Controllers\BarangkeluarController;
@@ -46,7 +47,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
     Route::resource('bkeluar', BarangkeluarController::class);
     Route::resource('pinjam', PeminjamController::class);
     Route::resource('kembali', PengembalianController::class);
-    
+
+    Route::get('cetak-laporan', [LaporanController::class, 'barangmasuk'])->name('getBarangmasuk');
+    Route::post('cetak-laporan', [LaporanController::class, 'reportBarangMasuk'])->name('reportBarangMasuk');
+     
     
     Route::get('/Dashoard', [App\Http\Controllers\DashboardController::class, 'index'])->name('Dashboard');
 });

@@ -25,7 +25,7 @@
                             <label for="">Nama Barang</label>
                             <input type="text" name="nama_barang" class="form-control @error('nama_barang') is-invalid @enderror">                       
                             <label for="">Alamat</label>
-                            <textarea id="catatan" name="alamat" rows="1.5" cols="149"></textarea>
+                            <textarea id="catatan" name="alamat" rows="1.5" cols="130"></textarea>
                             <label for="">No Telp</label>
                             <input type="number" name="no_wa" value=""class="form-control @error('no_wa') is-invalid @enderror">
                             @error('nama_supplier')

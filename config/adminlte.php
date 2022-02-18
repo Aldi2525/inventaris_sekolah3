@@ -128,7 +128,7 @@ return [
     'classes_content_header' => '',
     'classes_content' => 'sidebar-dark',
     'classes_sidebar_nav' => '',
-    'classes_sidebar' => 'sidebar-dark-info',
+    'classes_sidebar' => 'sidebar-dark-green',
     'classes_topnav' => 'navbar-dark navbar-info',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
@@ -282,27 +282,18 @@ return [
             'icon'        => 'fas fa-address-book',
         ],
 
-        // [
-        //     'text'    => 'Laporan',
-        //     'icon'    => 'fas fa-bookmark',
-        //     // 'submenu' => [
-        //     //     [
-        //     //         'text'        => 'Barang',
-        //     //         'url'         => 'admin/barang',
+        [
+            'text'    => 'Laporan',
+            'icon'    => 'fas fa-bookmark',
+            'submenu' => [
+                [
+                    'text'        => 'Barang Masuk',
+                    'url'         => 'admin/cetak-laporan',
                    
-        //     //     ],
-        //     //     [
-        //     //         'text'        => 'Peminjaman',
-        //     //         'url'         => 'admin/pinjam',
-                   
-        //     //     ],
-        //     //     [
-        //     //         'text'        => 'Pengembalian',
-        //     //         'url'         => 'admin/kembali',
-                    
-        //     //     ],
-        //     // ],
-        // ],
+                ],
+                
+            ],
+        ],
 
         
 

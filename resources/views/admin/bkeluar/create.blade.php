@@ -48,8 +48,8 @@
                                 </span>
                             @enderror
                         </div>
-                        <label for="">Alamat</label>
-                            <textarea id="catatan" name="alamat" rows="1.5" cols="149"></textarea>
+                        <label for="">Keterangan</label>
+                            <textarea id="catatan" name="catatan" rows="1" cols="130"></textarea>
 
                             
                             <button type="reset" class="btn btn-outline-warning">Reset</button>

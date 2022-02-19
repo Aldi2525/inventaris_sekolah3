@@ -42,8 +42,9 @@
                             </center>
                             @endforeach
                         
-            
+                
                 </table>
+                <p>TOTAL BARANG MASUK : {{($jumlah_msk)}}</p>
 </center>
             </div>
         </div>
@@ -80,7 +81,7 @@
                         
             
                 </table>
-
+                <p>TOTAL BARANG KELUAR : {{($jumlah_klr)}}</p>
 </center>
 <br><br>
            <center> 

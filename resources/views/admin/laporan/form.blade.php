@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content_header')
-    LAPORAN
+   <br>
 @endsection
 
 @section('css')
@@ -15,7 +15,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('LAPORAN BULANAN') }}</div>
+                    <div class="card-header">{{ __('LAPORAN') }}</div>
                     <div class="card-body">
                         <form action="{{ route('reportBarangMasuk') }}" method="post">
                             @csrf
@@ -28,7 +28,7 @@
                                 <input type="date" name="tanggalAkhir" id="" class="form-control">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-block btn-primary" type="submit">Search Laporan</button>
+                                <button class="btn btn-block btn-primary" type="submit">Cari Laporan</button>
                             </div>
                         </form>
                     </div>

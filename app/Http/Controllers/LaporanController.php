@@ -31,13 +31,19 @@ class LaporanController extends Controller
             $peminjam = Peminjam::whereBetween('created_at', [$start, $end])->get();
             $pengembalian = Pengembalian::whereBetween('created_at', [$start, $end])->get();
 
+            $jumlah_msk = 0;
             foreach ($bmasuk as $value) {
-                $jumlah += $value->jumlah;
+                $jumlah_msk += $value->jumlah_msk;
+            }
+
+            $jumlah_klr = 0;
+            foreach ($bkeluar as $value) {
+                $jumlah_klr += $value->jumlah_klr;
             }
             
          
             return view('admin.laporan.cetak_laporan', ['bmasuk' => $bmasuk, 'bkeluar' => $bkeluar,'peminjam' => $peminjam,
-            'pengembalian' => $pengembalian]);
+            'pengembalian' => $pengembalian, 'jumlah_msk'=> $jumlah_msk,'jumlah_klr'=> $jumlah_klr]);
         }
 
     }

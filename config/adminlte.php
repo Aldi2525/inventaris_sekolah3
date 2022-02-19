@@ -287,9 +287,9 @@ return [
             'icon'    => 'fas fa-bookmark',
             'submenu' => [
                 [
-                    'text'        => 'Barang Masuk',
+                    'text'        => 'DATA',
                     'url'         => 'admin/cetak-laporan',
-                   
+                    'icon'    => 'fas fa-box-open',
                 ],
                 
             ],

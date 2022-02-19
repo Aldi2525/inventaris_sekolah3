@@ -17,7 +17,7 @@ class BarangkeluarController extends Controller
     public function index()
     {
         //
-        $bkeluar = Barangkeluar::all();
+        $bkeluar = Barangkeluar::orderBy('id','desc')->get();
         return view('admin.bkeluar.index', compact('bkeluar'));
     }
 

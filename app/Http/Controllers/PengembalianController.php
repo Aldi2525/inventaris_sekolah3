@@ -18,7 +18,7 @@ class PengembalianController extends Controller
     public function index()
     {
         //
-        $pengembalian = Pengembalian::all();
+        $pengembalian = Pengembalian::orderBy('id','desc')->get();
         return view('admin.kembali.index', compact('pengembalian'));
     }
 

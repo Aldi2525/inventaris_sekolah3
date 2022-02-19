@@ -17,7 +17,7 @@ class PeminjamController extends Controller
     public function index()
     {
         //
-        $peminjam = Peminjam::all();
+        $peminjam = Peminjam::orderBy('id','desc')->get();
         return view('admin.pinjam.index', compact('peminjam'));
     }
 

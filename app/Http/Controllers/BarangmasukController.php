@@ -17,7 +17,7 @@ class BarangmasukController extends Controller
     public function index()
     {
         //
-        $bmasuk = Barangmasuk::all();
+        $bmasuk = Barangmasuk::orderBy('id','desc')->get();
         return view('admin.bmasuk.index', compact('bmasuk'));
     }
 
